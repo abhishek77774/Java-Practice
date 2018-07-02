@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class UniqueArray
+{
+    public static void main(String[] args) {
+        int[] a = new int[100];
+        int n;
+        Set<Integer> set = new HashSet<>();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter size of Array:");
+        n=sc.nextInt();
+        System.out.println("Enter "+n+" elements:");
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+            set.add(a[i]);
+        }
+        System.out.println("Entered Array:");
+        for(int i=0;i<n;i++)
+        {
+            System.out.println(a[i]);
+        }
+
+        System.out.println("Array without Duplicate Elements:");
+        System.out.println(set);
+
+
+    }
+}

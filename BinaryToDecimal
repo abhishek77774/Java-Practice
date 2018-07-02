@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class BinaryToDecimal
+{
+    public static void main(String[] args)
+    {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter binary number:");
+        n=sc.nextInt(2);
+        System.out.println("Equivalent decimal is:");
+        System.out.println(n);
+    }
+}

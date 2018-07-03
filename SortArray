@@ -15,7 +15,6 @@ public class SortArray
             a[i]=sc.nextInt();
             list.add(a[i]);
         }
-
         System.out.println("Array in Reverse Order:");
         Collections.sort(list);
         System.out.println(list);

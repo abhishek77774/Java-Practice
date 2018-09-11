@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class NextGreaterElement {
+    public static void main(String args[]) {
+
+        ArrayList<Integer> list = new ArrayList<>();
+        Stack<Integer> stacks = new Stack<>();
+        HashMap<Integer,Integer> map = new HashMap<>();
+
+        list.add(13);
+        list.add(7);
+        list.add(8);
+        list.add(15);
+
+        int max=Collections.max(list);
+        int size = list.size();
+        int last = list.get(size-1);
+
+        for(int i=0;i<size;i++)
+        {
+            if(stacks.empty()==true)
+            {
+                stacks.push(list.get(i));
+                //System.out.println("Pushed "+list.get(i));
+            }
+            else if(list.get(i)<stacks.peek())
+            {
+                stacks.push(list.get(i));
+                //System.out.println("Pushed "+list.get(i));
+            }
+            else
+            {
+                int k=0,v;
+                v=list.get(i);
+                while(!stacks.empty()&&stacks.peek()<list.get(i) )
+                {
+                   //System.out.println("Popped2 " + stacks.pop());
+                    k=stacks.pop();
+                    map.put(k,v);
+                }
+                System.out.println(stacks.push(list.get(i)));
+
+            }
+        }
+        map.put(max,-1);
+        map.put(last,-1);
+        System.out.println(list);
+        System.out.println(map);
+    }
+}
+

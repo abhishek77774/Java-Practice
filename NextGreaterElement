@@ -39,7 +39,6 @@ public class NextGreaterElement {
                     map.put(k,v);
                 }
                 System.out.println(stacks.push(list.get(i)));
-
             }
         }
         map.put(max,-1);
